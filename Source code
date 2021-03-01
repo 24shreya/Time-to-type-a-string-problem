@@ -4,22 +4,18 @@ using namespace std;
 
 int main()
 {
-	string a="abc";
+  string a="abc";
   string kb="abcdefghijklmnopqrstuvwxyz";
   int start=0, now=0, time=0;
 	for(int m=0; m<a.length(); m++)
-	{  
-		for(int n=0; n<kb.length();n++)
-	    {
-			if(kb[n]==a[m])
-			{
-				now=n;
+	{  for(int n=0; n<kb.length();n++)
+	    {   if(kb[n]==a[m])
+			{       now=n;
 				time+=(start>now?(start-now):(now-start));
 				start=n;
 			}
 	    }
-   }
-   
-   cout<<time;
+       }
+cout<<time;
 return (0); 
 }
